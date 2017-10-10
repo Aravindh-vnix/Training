@@ -1,27 +1,22 @@
 
-file = open("word.txt")
-text = file.read().strip().split()
+import os
+
 
 
 while True:
-    print "Type exit when you completed on entering the string"
-    s = raw_input("Enter a string: ")
-    if s == "":
-        continue
-
-    if s =="exit":
+    print ""
+    print "Type 'stop' when you stopped adding the string"
+    s = raw_input("Enter the string:")
+    if s=="stop":
         break
 
-    if s in text:
-        print("This String is already in the list")
+    with open("word.txt" ,"r+") as f:
+        line_found = any(s in line for line in f)
+        print "This word is Exist"
 
+        if not line_found:
+            f.seek(0 ,os.SEEK_END)
+            f.write(s)
+            f.write("\n")
+            print "Now only Added to the file. check the file now"
 
-    else:
-        print("No such string found,try again")
-        file = open("word.txt","a")
-        file.write("\n")
-        file.write(s)
-        print "This word was added to the list"
-        continue
-
-file.close()
