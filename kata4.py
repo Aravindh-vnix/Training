@@ -1,10 +1,9 @@
-
 print "DISPLAYING THE MINIMUM TEMPERATURE OF THE EACH DAY "
 
 
-def my_min_function(somelist):
+def min_function(temperatures):
     min_value = None
-    for value in somelist:
+    for value in temperatures:
         if not min_value:
             min_value = value
         elif value < min_value:
@@ -16,20 +15,20 @@ with open("weather.dat", "r") as f:
     data = f.readlines()
 
 for line in data:
-    firstwords=line.split()
-    #print firstwords
+    words=line.split()
+    #print words
     a=[]
-    for i in range(len(firstwords)):
-        a = firstwords[0]
+    for i in range(len(words)):
+        a = words[0]
 
     print "Day:",a
 
-    for j in range(len(firstwords)):
-        b =firstwords[2]
+    for j in range(len(words)):
+        b =words[2]
 
     print "Minimum Temperature:",b
     print " "
 
 
 
-print my_min_function(a)
+print min_function(a)
