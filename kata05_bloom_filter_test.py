@@ -1,7 +1,7 @@
 import unittest
 import timeit
 
-from kata5 import NaiveChecker, BloomChecker
+from kata05_bloom_filter import NaiveChecker, BloomChecker
 
 find = raw_input("Enter the word:")
 
@@ -15,9 +15,13 @@ class TestNaiveChecker(unittest.TestCase):
 
     def test_simple_word_is_in(self):
 
-        self.assertTrue(self.n.check(find))
-        print "Word Found"
+        is_found = self.n.check(find)
 
+
+        if is_found == True:
+            print "Word found"
+        else:
+            print "Word not found"
 
 
 
