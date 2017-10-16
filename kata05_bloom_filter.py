@@ -59,4 +59,3 @@ class BloomChecker(SpellChecker):
 
     def check(self, word):
         pass
-
