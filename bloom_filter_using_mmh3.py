@@ -1,6 +1,4 @@
-
 #Implementation of kata05 http://codekata.com/kata/kata05-bloom-filters/
-
 from bitarray import bitarray
 import mmh3
 
@@ -23,10 +21,11 @@ class BloomFilter:
                 return "no"
         return "yes"
 
-bf = BloomFilter(500000, 7)
+bf = BloomFilter(3000000, 20)
 
 lines = open("words.txt").read().splitlines()
 for line in lines:
     bf.add(line)
 
-print bf.lookup("vels")
+print bf.lookup("abc")
+
