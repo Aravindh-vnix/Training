@@ -1,3 +1,4 @@
+#Implementation of kata09 http://codekata.com/kata/kata09-back-to-the-checkout/
 class Price:
     def __init__(self, itemName, unitPrice, discountFactor, discountPrice):
         self.itemName = itemName
