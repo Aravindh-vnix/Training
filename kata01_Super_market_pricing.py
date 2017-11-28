@@ -1,5 +1,5 @@
+#kata01-Super_market_pricing. #http://codekata.com/kata/kata01-supermarket-pricing/
 print "Super Market Pricing"
-
 print "Stock_checking"
 print  " "
 
@@ -8,22 +8,16 @@ print " "
 cans = int(cans)
 print "Total number of cans are" ,cans
 
-
-
 cp = 15
 x = cans * cp
-
 
 sp = 30
 y = cans * sp
 
-
 profit = y-x
 print "Profit before offer",profit
 
-
 print "You put an offer of:BUY_2 GET_1 FREE"
-
 offer = cans//3
 z = cans - offer
 cpao = z * cp
